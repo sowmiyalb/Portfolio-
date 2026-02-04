@@ -1,6 +1,17 @@
-const reveals=document.querySelectorAll('.reveal');
-window.addEventListener('scroll',()=>{reveals.forEach(s=>{if(s.getBoundingClientRect().top<window.innerHeight-100){s.classList.add('active')}})});
-let index=0;const slides=document.querySelectorAll('.slide');
-function showSlide(i){slides.forEach(s=>s.classList.remove('active'));slides[i].classList.add('active');}
-function nextSlide(){index=(index+1)%slides.length;showSlide(index);}
-function prevSlide(){index=(index-1+slides.length)%slides.length;showSlide(index);}
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 80) {
+      sec.style.opacity = 1;
+      sec.style.transform = "translateY(0)";
+    }
+  });
+});
+
+sections.forEach(sec => {
+  sec.style.opacity = 0;
+  sec.style.transform = "translateY(30px)";
+  sec.style.transition = "all 0.6s ease";
+});
