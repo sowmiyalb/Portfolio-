@@ -2,7 +2,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family:'Segoe UI',sans-serif;
 }
 
 body{
@@ -15,6 +15,7 @@ header{
   background:#020617;
   position:sticky;
   top:0;
+  z-index:100;
 }
 
 .navbar{
@@ -114,29 +115,27 @@ header{
 }
 
 /* Contact */
-.contact-form{
-  max-width:400px;
-  margin:auto;
+.contact-quote .quote{
+  font-size:15px;
+  font-style:italic;
+  margin:20px auto 30px;
+  max-width:500px;
+  color:#cbd5f5;
+}
+
+.contact-info{
   display:flex;
   flex-direction:column;
   gap:12px;
+  align-items:center;
+  font-size:14px;
 }
 
-.contact-form input,
-.contact-form textarea{
-  padding:8px;
-  border-radius:6px;
-  border:none;
+.contact-info i{
+  color:#38bdf8;
 }
 
-.contact-form button{
-  padding:9px;
-  background:#38bdf8;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-}
-
+/* Footer */
 footer{
   background:#020617;
   color:#cbd5f5;
