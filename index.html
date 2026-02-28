@@ -20,7 +20,7 @@ body{
   background:#000;
   color:#eaeaea;
   font-family:'Poppins',sans-serif;
-  line-height:1.6;
+  line-height:1.7;
 }
 
 /* GOLD SHINE */
@@ -55,19 +55,7 @@ nav{
   font-family:'Playfair Display',serif;
 }
 
-nav a{
-  color:#c9a227;
-  margin-left:25px;
-  text-decoration:none;
-  font-size:15px;
-  transition:0.3s;
-}
-
-nav a:hover{
-  color:#fff1b0;
-}
-
-/* HERO BANNER */
+/* HERO */
 .hero{
   height:50vh;
   display:flex;
@@ -85,36 +73,22 @@ nav a:hover{
 .hero h1{
   font-size:48px;
   font-family:'Playfair Display',serif;
-  margin-bottom:15px;
 }
 
 .hero p{
+  margin-top:15px;
   font-size:18px;
   color:#ddd;
 }
 
-/* Mobile view banner heading size */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 28px;
-  }
-}
-
-/* SECTION FULL WIDTH */
 section{
-  padding:40px 5%;
-  width:100%;
+  padding:60px 5%;
 }
 
-/* HEADINGS CENTER */
 .section-title{
   font-family:'Playfair Display',serif;
-  font-size:28px;
-  margin-bottom:20px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
+  font-size:30px;
+  margin-bottom:40px;
   text-align:center;
 }
 
@@ -131,6 +105,95 @@ section{
 .card:hover{
   transform:translateY(-5px);
   box-shadow:0 0 20px rgba(245,215,110,0.4);
+}
+
+/* ========================= */
+/* EXPERTISE SECTION */
+/* ========================= */
+
+#expertise-container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.tab-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+  margin-bottom:30px;
+}
+
+.tab-btn{
+  background:#111;
+  border:1px solid rgba(201,162,39,0.3);
+  color:#f5d76e;
+  padding:12px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+  font-size:14px;
+}
+
+.tab-btn i{ margin-right:6px; }
+
+.tab-btn:hover,
+.tab-btn.active{
+  background:#c9a227;
+  color:#000;
+}
+
+.tab-content{
+  display:none;
+  background:#111;
+  padding:40px;
+  border-radius:10px;
+  border:1px solid rgba(201,162,39,0.2);
+  min-height:320px;
+}
+
+.tab-content.active{
+  display:block;
+}
+
+.tab-content h3{
+  color:#f5d76e;
+  margin-bottom:15px;
+}
+
+.tab-content p{
+  margin-bottom:20px;
+  color:#ccc;
+}
+
+.tab-content ul{
+  padding-left:20px;
+  line-height:1.8;
+}
+
+/* Desktop Layout */
+@media(min-width:992px){
+
+  #expertise-container{
+    display:flex;
+    gap:50px;
+  }
+
+  .tab-buttons{
+    flex-direction:column;
+    width:30%;
+    align-items:stretch;
+  }
+
+  .tab-btn{
+    text-align:left;
+    font-size:15px;
+    padding:15px;
+  }
+
+  .tab-content{
+    width:70%;
+  }
 }
 
 /* SKILLS */
@@ -160,23 +223,6 @@ section{
   box-shadow:0 0 20px rgba(245,215,110,0.4);
 }
 
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-.skill-card {
-  background-color: #000;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-#about .split-text {
-  text-align: center;
-}
-
 /* CONTACT */
 .contact-container{
   display:grid;
@@ -204,154 +250,154 @@ section{
   box-shadow:0 0 20px rgba(245,215,110,0.4);
 }
 
-/* FOOTER */
 footer{
   background:#111;
   text-align:center;
-  padding:20px 5%;
+  padding:20px;
   border-top:1px solid rgba(201,162,39,0.2);
   font-size:14px;
   color:#aaa;
 }
 
-footer span{
-  color:#f5d76e;
-}
-
-/* Mobile View */
 @media(max-width:768px){
-  .nav-links{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:70px;
-    right:5%;
-    background:#000;
-    width:200px;
-    padding:20px;
-    border:1px solid rgba(201,162,39,0.3);
-  }
-
-  .nav-links a{
-    display:block;
-    margin:15px 0;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .project-card{
-    flex:0 0 100%;
-  }
+  .hero h1{ font-size:28px; }
 }
-
 </style>
 </head>
 
 <body>
 
 <nav>
-  <div class="logo gold">Sowmiya L B</div>
-
-  <!-- Hamburger Icon -->
-  <div class="menu-toggle" id="menu-toggle">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-
-  <!-- Menu Links -->
-  <div class="nav-links" id="nav-links">
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <div class="logo gold">Sowmiya</div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-  <h1 class="gold">Professional Domain and Hosting Handler</h1>
-  <p>Expert in Domain Management, Hosting, and Website Optimization</p>
+  <h1 class="gold">Domain & Hosting Specialist</h1>
+  <p>Managing 100+ Websites, Domains & Business Emails with Precision</p>
 </div>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <h2 class="section-title gold">
-    <i class="fa-solid fa-briefcase"></i> Experience
-  </h2>
-
+<!-- ABOUT -->
+<section>
+  <h2 class="section-title gold">About Me</h2>
   <div class="card">
-    <b>CBRA</b> – Domain and Hosting (July 2025 - Present)
-    <ul>
-      <li>Managing domains and hosting services for clients.</li>
-      <li>Working with hosting providers like WP Engine, Hostinger, Cloudways, Miles Web, GoDaddy.</li>
-      <li>Handling DNS settings, domain purchase, SSL installation, and website migration.</li>
-      <li>Managing business email setups using Google Workspace and Zoho.</li>
-      <li>Providing ongoing technical support and troubleshooting issues for 100+ clients.</li>
-      <li>Hosted 105 WordPress sites.</li>
-      <li>Purchased and managed 100+ business emails in Google Workspace and Zoho.</li>
-      <li>Handled 100+ domains.</li>
-      <li>Proficient in web design basics.</li>
-    </ul>
+    I am a Domain and Hosting Specialist managing <b>100+ websites, domains and business emails</b>.
+    Skilled in DNS configuration, SSL setup, migration and hosting management.
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <h2 class="section-title gold">
-    <i class="fa-solid fa-code"></i> Skills
-  </h2>
-  <div class="skills-grid">
-    <div class="skill-box"><i class="fa-brands fa-wordpress"></i><p>WordPress</p></div>
-    <div class="skill-box"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
-    <div class="skill-box"><i class="fa-brands fa-css3-alt"></i><p>CSS</p></div>
-    <div class="skill-box"><i class="fa-brands fa-java"></i><p>Java Basics</p></div>
-    <!-- Added Hosting and Business Mail Skills -->
-    <div class="skill-box"><i class="fa-solid fa-server"></i><p>Hosting</p></div>
-    <div class="skill-box"><i class="fa-solid fa-envelope"></i><p>Business Mail (Google & Zoho)</p></div>
+<!-- EXPERTISE -->
+<section>
+  <h2 class="section-title gold">Skills</h2></h2>
+
+  <div id="expertise-container">
+
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="openTab(event,'domain')">
+        <i class="fa-solid fa-globe"></i> Domain Management
+      </button>
+      <button class="tab-btn" onclick="openTab(event,'hosting')">
+        <i class="fa-solid fa-server"></i> Hosting Solutions
+      </button>
+      <button class="tab-btn" onclick="openTab(event,'migration')">
+        <i class="fa-solid fa-right-left"></i> Website Migration
+      </button>
+      <button class="tab-btn" onclick="openTab(event,'email')">
+        <i class="fa-solid fa-envelope"></i> Business Email Setup
+      </button>
+      <button class="tab-btn" onclick="openTab(event,'support')">
+        <i class="fa-solid fa-screwdriver-wrench"></i> Web Support
+      </button>
+    </div>
+
+    <div class="tab-content active" id="domain">
+      <h3>Domain Management</h3>
+      <p>Complete domain lifecycle management ensuring stable connectivity.</p>
+      <ul>
+        <li>Registration & renewal</li>
+        <li>DNS setup (A, CNAME, MX, TXT)</li>
+        <li>Domain transfers</li>
+        <li>Security monitoring</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="hosting">
+      <h3>Hosting Solutions</h3>
+      <p>Reliable hosting setup and server management.</p>
+      <ul>
+        <li>Shared, VPS & Managed hosting</li>
+        <li>WP Engine, Hostinger, Cloudways</li>
+        <li>cPanel management</li>
+        <li>Backup & restore</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="migration">
+      <h3>Website Migration</h3>
+      <p>Smooth migration with zero downtime.</p>
+      <ul>
+        <li>WordPress migration</li>
+        <li>SSL & HTTPS setup</li>
+        <li>Database transfer</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="email">
+      <h3>Business Email Setup</h3>
+      <p>Professional email configuration.</p>
+      <ul>
+        <li>Google Workspace</li>
+        <li>Zoho Mail</li>
+        <li>MX records</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="support">
+      <h3>Web Support</h3>
+      <p>Continuous technical support.</p>
+      <ul>
+        <li>Troubleshooting</li>
+        <li>Speed optimization</li>
+        <li>Plugin fixes</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2 class="section-title gold">
-    <i class="fa-solid fa-envelope"></i> Contact
-  </h2>
+<section>
+  <h2 class="section-title gold">Contact</h2>
   <div class="contact-container">
     <div class="contact-box">
       <i class="fa-solid fa-phone"></i>
-      <p>Phone: 6369567316</p>
+      <p>6369567316</p>
     </div>
     <div class="contact-box">
       <i class="fa-solid fa-envelope"></i>
-      <p>Email: <a href="mailto:lbsowmiya16@gmail.com" style="color: #fff;">lbsowmiya16@gmail.com</a></p>
+      <p>lbsowmiya16@gmail.com</p>
     </div>
     <div class="contact-box">
       <i class="fa-solid fa-location-dot"></i>
-      <p>Location: Madurai, Tamil Nadu</p>
+      <p>Madurai, Tamil Nadu</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Sowmiya | All Rights Reserved</p>
+  © 2026 Sowmiya L B | All Rights Reserved
 </footer>
 
 <script>
-// Toggle the menu on mobile view
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+function openTab(evt, tabName){
+  let contents=document.querySelectorAll(".tab-content");
+  let buttons=document.querySelectorAll(".tab-btn");
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+  contents.forEach(c=>c.classList.remove("active"));
+  buttons.forEach(b=>b.classList.remove("active"));
+
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
 </script>
 
 </body>
